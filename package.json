@@ -1,0 +1,67 @@
+{
+  "name": "pay-calculator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/manugill/pay-calculator.git",
+  "author": "manu <manugill1995@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "micro": "^7.3.2",
+    "moment": "^2.18.1",
+    "next": "^2.1.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "recompose": "^0.23.1",
+    "styled-components": "^1.4.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-react": "^4.3.0",
+    "eslint-plugin-immutable": "^1.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^6.10.3",
+    "eslint-plugin-standard": "^3.0.1",
+    "prettier": "^1.2.2",
+    "prettier-eslint": "^6.1.0",
+    "standard": "^8.6.0"
+  },
+  "babel": {
+    "presets": [
+      "next/babel",
+      "stage-0"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "standard",
+      "standard-react"
+    ],
+    "plugins": [
+      "react",
+      "immutable"
+    ],
+    "rules": {
+      "no-var": 2,
+      "immutable/no-let": 2,
+      "immutable/no-this": 2,
+      "immutable/no-mutation": 2,
+      "prefer-const": 2,
+      "arrow-parens": [
+        2,
+        "always"
+      ],
+      "react/prop-types": 0
+    }
+  }
+}
