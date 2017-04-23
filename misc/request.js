@@ -1,14 +1,14 @@
-import { serverUrl } from '../misc/config'
 /* global fetch */
 
-export default async (data) => {
+export default async (action, data) => {
   try {
-    const response = await fetch(serverUrl(), {
+    const response = await fetch(`/api/${action}`, {
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
       method: 'POST',
-      body: JSON.stringify({
-        action: 'pay',
-        ...data
-      })
+      body: JSON.stringify(data)
     })
     return await response.json()
   } catch (e) {

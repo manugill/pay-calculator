@@ -5,17 +5,16 @@
   "author": "manu <manugill1995@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "next & npm run dev-server",
-    "dev-server": "babel-watch server/index.js",
+    "dev": "babel-node server/index.js",
     "build": "next build",
-    "start": "next start & babel-node server/index.js"
+    "start": "babel-node server/index.js"
   },
   "dependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
     "isomorphic-fetch": "^2.2.1",
-    "micro": "^7.3.2",
-    "micro-cors": "^0.0.4",
     "moment": "^2.18.1",
     "next": "^2.1.1",
     "path-match": "^1.2.4",

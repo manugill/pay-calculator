@@ -8,8 +8,7 @@ const enhance = compose(
   withState('payed', 'payedSet', 'LOADING'),
   componentDidMount(async ({ props }) => {
     const { firstName, lastName, date } = props
-    const { alreadyPayed } = await request({
-      action: 'check',
+    const { alreadyPayed } = await request('check', {
       firstName,
       lastName,
       date
@@ -22,8 +21,7 @@ const enhance = compose(
       e.preventDefault()
       props.payedSet(() => 'LOADING')
 
-      const { payed } = await request({
-        action: 'pay',
+      const { payed } = await request('pay', {
         firstName,
         lastName,
         date,
