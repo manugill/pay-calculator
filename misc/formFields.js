@@ -1,7 +1,6 @@
 export default [
   {
     name: 'firstName',
-    value: 'Manu',
     attrs: {
       required: true,
       type: 'text',
@@ -11,7 +10,6 @@ export default [
   },
   {
     name: 'lastName',
-    value: 'Gill',
     attrs: {
       placeholder: 'Last Name',
       required: true,
@@ -20,7 +18,6 @@ export default [
   },
   {
     name: 'annualIncome',
-    value: '60050',
     attrs: {
       placeholder: 'Annual Income',
       required: true,
@@ -33,7 +30,6 @@ export default [
   },
   {
     name: 'superRate',
-    value: '9',
     attrs: {
       placeholder: 'Super Rate',
       required: true,

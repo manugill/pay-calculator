@@ -1,43 +1,51 @@
 {
   "name": "pay-calculator",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/manugill/pay-calculator.git",
   "author": "manu <manugill1995@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "dev": "next & npm run dev-server",
+    "dev-server": "babel-watch server/index.js",
+    "build": "next build & npm run build-server",
+    "build-server": "babel server --out-dir .next/dist/server",
+    "start": "next start & node .next/dist/server/index.js"
   },
   "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "isomorphic-fetch": "^2.2.1",
     "micro": "^7.3.2",
+    "micro-cors": "^0.0.4",
     "moment": "^2.18.1",
     "next": "^2.1.1",
+    "path-match": "^1.2.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-lifecycle-hoc": "^3.1.0",
     "recompose": "^0.23.1",
     "styled-components": "^1.4.5"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
+    "babel-preset-env": "^1.4.0",
     "babel-preset-stage-0": "^6.24.1",
+    "babel-watch": "^2.0.6",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-react": "^4.3.0",
-    "eslint-plugin-immutable": "^1.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^6.10.3",
     "eslint-plugin-standard": "^3.0.1",
     "prettier": "^1.2.2",
-    "prettier-eslint": "^6.1.0",
-    "standard": "^8.6.0"
+    "prettier-eslint": "^6.1.0"
   },
   "babel": {
     "presets": [
       "next/babel",
+      "env",
       "stage-0"
     ]
   },
@@ -48,14 +56,10 @@
       "standard-react"
     ],
     "plugins": [
-      "react",
-      "immutable"
+      "react"
     ],
     "rules": {
       "no-var": 2,
-      "immutable/no-let": 2,
-      "immutable/no-this": 2,
-      "immutable/no-mutation": 2,
       "prefer-const": 2,
       "arrow-parens": [
         2,

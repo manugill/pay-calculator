@@ -9,7 +9,7 @@ export default (props) => {
   const rows = [
     {
       title: 'Pay Date',
-      value: props.date.format('D MMMM YYYY')
+      value: props.now.format('D MMMM YYYY')
     },
     {
       title: 'Pay Frequency',

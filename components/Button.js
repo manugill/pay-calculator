@@ -20,11 +20,15 @@ const Button = styled.button`
   color: #000;
   font-weight: 500;
   outline: none;
-  transition: 0.2s all ease;
+  transition: 0.1s all ease;
 
   &:hover,
   &:focus {
     background: #dfdfdf;
+  }
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
   }
 `
 

@@ -4,7 +4,7 @@ injectGlobal`
   /* Basic reset with box sizing */
   html {
     text-size-adjust: 100%;
-    box-sizing: border-box;
+  box-sizing: border-box;
   }
 
   body {

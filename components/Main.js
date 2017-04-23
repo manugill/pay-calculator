@@ -1,3 +1,4 @@
+import 'isomorphic-fetch'
 import React from 'react'
 import { compose, withHandlers, withState } from 'recompose'
 import Title from './Title'
@@ -9,11 +10,11 @@ import fields from '../misc/formFields'
 // import calculatePay from '../misc/calculatePay'
 
 // From formFields, generate the HOCs to manage state and submission
-const formEnhance = compose(
+const enhance = compose(
   ...fields.map(({ name, value }) =>
     withState(name, `${name}Set`, value || '')
   ),
-  withState('showPayslip', 'showPayslipSet', true),
+  withState('showPayslip', 'showPayslipSet', false),
   withHandlers({
     onSubmit: (props) => (e) => {
       e.preventDefault()
@@ -26,7 +27,7 @@ const formEnhance = compose(
   })
 )
 
-export default formEnhance(
+export default enhance(
   (props) =>
     (!props.showPayslip
       ? <div>

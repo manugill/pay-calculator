@@ -9,8 +9,11 @@ export default (annualIncome, superRate) => {
   const total = netIncome - superTotal
 
   return {
+    // Sent
     annualIncome,
     superRate,
+
+    // Calculated
     grossIncome,
     annualTax,
     incomeTax,
