@@ -3,7 +3,7 @@ import { serverUrl } from '../misc/config'
 
 export default async (data) => {
   try {
-    const response = await fetch(serverUrl, {
+    const response = await fetch(serverUrl(), {
       method: 'POST',
       body: JSON.stringify({
         action: 'pay',

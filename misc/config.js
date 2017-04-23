@@ -1,2 +1,3 @@
+/* global location */
 export const serverPort = 3001
-export const serverUrl = `http://localhost:${serverPort}`
+export const serverUrl = () => `//${location.hostname}:${serverPort}`

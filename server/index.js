@@ -61,3 +61,4 @@ const server = micro(cors()(handler))
 
 // Start
 server.listen(serverPort)
+console.log(`> Micro started on ${serverPort}`)
